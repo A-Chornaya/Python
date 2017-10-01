@@ -4,9 +4,10 @@ def numb_seq(n):
     sequence = [0]
     for i in range(1, int(math.sqrt(n)) + 1):
         sequence.append(i)
+    # remove last, if square of i = n (not < n)
     if i**2 == n:
         sequence.pop()
-    print(sequence)
+    print(', '.join(str(e) for e in sequence))
 
 
 try:
