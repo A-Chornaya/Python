@@ -11,7 +11,7 @@ class Envelope:
 
 
 def restart_program():
-    answer = input('Want to continue? (enter "y" or "yes" if want):')
+    answer = input('Do you want to continue? (enter "y" or "yes" if want):')
     if (answer.lower() == 'y' or answer.lower() == 'yes'):
         return True
     else:
