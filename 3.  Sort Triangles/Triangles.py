@@ -32,6 +32,7 @@ while True:
         continue
     break
 
+list_of_triangles.sort(key=lambda x: x.square, reverse=True)
 print('=======Sort triangles=======')
 for obj in list_of_triangles:
     print('[Triangle %s]: %f cm' % (obj.name, obj.square))
