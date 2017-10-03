@@ -18,7 +18,8 @@ def board(len, hei):
 
 if len(sys.argv) != 3:
     print(
-        'Invalid number of parameters. Please, start program as: name_of_file length height')
+        'Invalid number of parameters.'
+        '\nPlease, start program as: name_of_file length height')
     sys.exit(1)
 
 try:
