@@ -4,14 +4,17 @@ class Triangle:
     def __init__(self, name, a: float, b: float, c: float):
         if (a <= 0 or b <= 0 or c <= 0):
             raise ValueError
+        # check for sides of triangle
+        if (a >= b + c or b >= a + c or c >= a + b):
+            raise NotTriangle
         self.name = name
         self.a = a
         self.b = b
         self.c = c
         self.square = 1 / 4 * math.sqrt(4 * a*a * b*b - (a*a + b*b + c*c))
 
-
-
+class NotTriangle(Exception):
+    pass
 
 list_of_triangles = list()
 while True:
@@ -24,6 +27,9 @@ while True:
     except ValueError:
         print('Error of value types. Sides of the triangle must be '
               'positive numbers')
+        continue
+    except NotTriangle:
+        print('This sides don`t form a triangle')
         continue
 
     answer = input('Do you want enter another one? (enter "y" or "yes" if '
