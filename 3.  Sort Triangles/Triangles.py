@@ -11,7 +11,7 @@ class Triangle:
         self.a = a
         self.b = b
         self.c = c
-        self.square = 1 / 4 * math.sqrt(4 * a*a * b*b - (a*a + b*b + c*c))
+        self.square = 1 / 4 * math.sqrt(4 * a*a * b*b - (a*a + b*b - c*c)**2)
 
 class NotTriangle(Exception):
     pass
@@ -20,10 +20,11 @@ list_of_triangles = list()
 while True:
     tringle_str = input('Enter a triangle:')
     temp_list = tringle_str.split(',', 4)
-
+    if len(temp_list) != 4:
+        print('Incorrect input data. Enter data separeted by ","')
+        continue
     try:
-        list_of_triangles.append(Triangle(temp_list[0], float(temp_list[1]),
-                float(temp_list[2]), float(temp_list[3])))
+        list_of_triangles.append(Triangle(temp_list[0], float(temp_list[1]), float(temp_list[3]), float(temp_list[2])))
     except ValueError:
         print('Error of value types. Sides of the triangle must be '
               'positive numbers')
