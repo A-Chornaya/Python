@@ -2,20 +2,22 @@ class Envelope:
     def __init__(self, a, b):
         self.a = a
         self.b = b
+
     def compare_envelopes(self, env):
         if (((self.a <= env.a) and (self.b <= env.b))
-            or ((self.a <= env.b) and (self.b <= env.a))):
-                return True
+                or ((self.a <= env.b) and (self.b <= env.a))):
+            return True
         else:
-                return False
+            return False
 
 
 def restart_program():
     answer = input('Do you want to continue? (enter "y" or "yes" if want):')
-    if (answer.lower() == 'y' or answer.lower() == 'yes'):
+    if answer.lower() == 'y' or 'yes' == answer.lower():
         return True
     else:
         return False
+
 
 while True:
     print('')
