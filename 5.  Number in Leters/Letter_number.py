@@ -6,8 +6,8 @@ def translit(numb):
     second_dozen = ('десять', 'одиннадцать', 'двенадцать', 'тринадцать',
                     'четырнадцать', 'пятнадцать', 'шестнадцать', 'семнадцать',
                     'восемнадцать', 'девятнадцать')
-    dozens = ('двадцать', 'тридцать', 'сорок', 'пятдесят',
-              'шестьдесят', 'семьдесят', 'восемьдесят', 'десяносто')
+    dozens = ('двадцать', 'тридцать', 'сорок', 'пятьдесят',
+              'шестьдесят', 'семьдесят', 'восемьдесят', 'девяносто')
     hundreds = ('сто', 'двести', 'триста', 'четыреста', 'пятьсот', 'шестьсот',
                 'семьсот', 'восемьсот', 'девятьсот')
     thousands = ('тысяча', 'тысячи', 'тысяч')
@@ -34,21 +34,21 @@ def translit(numb):
         part = one_class % 100
         part2 = 0
         if whole > 0:
-            temp_str = temp_str + ' ' + hundreds[whole - 1]
+            temp_str = temp_str + hundreds[whole - 1] + ' '
         if part >= 20:
             part1 = part // 10
             part2 = part % 10
-            temp_str = temp_str + ' ' + dozens[part1 - 2]
+            temp_str = temp_str + dozens[part1 - 2] + ' '
             if part2 != 0:
-                temp_str = temp_str + ' ' + units[part2]
+                temp_str = temp_str + units[part2] + ' '
         elif 10 <= part <= 19:
-            temp_str = temp_str + ' ' + second_dozen[part - 10]
+            temp_str = temp_str + second_dozen[part - 10] + ' '
         elif 0 < part <= 9:
-            temp_str = temp_str + ' ' + units[part]
+            temp_str = temp_str + units[part] + ' '
 
         # add prefix if number > 999
         if j >= 0 and one_class > 0:
-            temp_str = temp_str + ' ' + other[j]
+            temp_str = temp_str + other[j]
 
         # add suffixes
         # replace 'один тысяч'
@@ -64,7 +64,8 @@ def translit(numb):
         if j > 0 and (1 < part < 5 or 1 < part2 < 5):
             temp_str = temp_str + suffix[0]
         # for millions and higher from 5
-        elif j > 0 and (4 < part < 20 or part2 > 4 or part % 10 == 0):
+        elif j > 0 and (4 < part < 20 or part2 > 4
+                        or (one_class > 0 and part % 10 == 0)):
             temp_str = temp_str + suffix[1]
 
         numb = numb // 1000
@@ -83,7 +84,11 @@ def main():
     except ValueError:
         print('Error of input data. Please, enter an integer')
     else:
-        result = translit(number)
-        print(result)
+        try:
+            result = translit(number)
+        except IndexError:
+            print('Number must be less than 9.99e35')
+        else:
+            print(result)
 
 main()
