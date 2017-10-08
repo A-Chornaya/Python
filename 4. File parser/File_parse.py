@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def find(file_path, str_find):
     find_count = 0
     try:
@@ -10,30 +11,31 @@ def find(file_path, str_find):
         return find_count
     except FileNotFoundError:
         print('File "%s" not found' % file_path)
-        return 0
+        return -1
     except Exception as e:
         print('Error:', e)
-
+        return -1
 
 
 def replace(file_path, str_find, str_replace):
-     try:
-         with open(file_path, 'r') as f:
-             with open('temp.txt', 'w') as temp:
-                 for line in f:
-                     line_new = line.replace(str_find, str_replace)
-                     temp.write(line_new)
-         os.remove(file_path)
-         os.rename('temp.txt', file_path)
-         return True
-     except FileNotFoundError:
-         print('File "%s" not found' % file_path)
-         return False
-     except Exception as e:
-         print('Error:', e)
-     finally:
-         if os._exists('temp.txt'):
+    try:
+        with open(file_path, 'r') as f:
+            with open('temp.txt', 'w') as temp:
+                for line in f:
+                    line_new = line.replace(str_find, str_replace)
+                    temp.write(line_new)
+        os.remove(file_path)
+        os.rename('temp.txt', file_path)
+        return True
+    except FileNotFoundError:
+        print('File "%s" not found' % file_path)
+        return False
+    except Exception as e:
+        print('Error:', e)
+    finally:
+        if os._exists('temp.txt'):
             os.remove('temp.txt')
+
 
 def main():
     if len(sys.argv) < 3 or len(sys.argv) > 4:
@@ -44,13 +46,20 @@ def main():
               'your_file replacement_string new_string')
     elif len(sys.argv) == 3:
         count_str = find(sys.argv[1], sys.argv[2])
-        if count_str:
+        if count_str > 0:
             print('A string "%s" contained in the file "%s" %i times' %
                   (sys.argv[2], sys.argv[1], count_str))
+        elif count_str == 0:
+            print('There are no string "%s" in a file "%s"' % (sys.argv[2],
+                                                           sys.argv[1]))
     else:
-        if replace(sys.argv[1], sys.argv[2], sys.argv[3]):
-            print('A string "%s" replaced in the file "%s" by a string "%s"' %
-                  (sys.argv[2], sys.argv[1], sys.argv[3]))
-
+        count_str = find(sys.argv[1], sys.argv[2])
+        if count_str > 0:
+            if replace(sys.argv[1], sys.argv[2], sys.argv[3]):
+                print('A string "%s" replaced in the file "%s" by a string '
+                      '"%s" %i times' %
+                      (sys.argv[2], sys.argv[1], sys.argv[3], count_str))
+        else:
+            print('There are no string "%s" for replacement' % sys.argv[2])
 
 main()
