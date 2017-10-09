@@ -3,6 +3,9 @@ import math
 
 class Triangle:
     def __init__(self, name, a: float, b: float, c: float):
+        if type(a) != float or type(b) != float or type(c) != float \
+                or type(name) != str:
+            raise TypeError
         if a <= 0 or b <= 0 or c <= 0:
             raise ValueError
         # check for sides of triangle
@@ -55,8 +58,13 @@ if __name__ == '__main__':
                          float(temp_list[2]))
             list_of_triangles.append(t)
         except ValueError:
-            print('Error of value types. Sides of the triangle must be '
-                  'positive numbers')
+            print('Error of value types. \n'
+                  'Sides of the triangle must be '
+                  'positive numbers and the name must be a string')
+            continue
+        except TypeError:
+            print('Error of input types. A name of triangle must be a string '
+                  'and sides of triangle must be positive numbers')
             continue
         except NotTriangleError:
             print('This sides don`t form a triangle')

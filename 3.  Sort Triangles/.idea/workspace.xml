@@ -12,28 +12,18 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/3___Sort_Triangles$Envelopes.coverage" NAME="Envelopes Coverage Results" MODIFIED="1507135626620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../2. Envelopes" />
     <SUITE FILE_PATH="coverage/3___Sort_Triangles$Tickets2.coverage" NAME="Tickets2 Coverage Results" MODIFIED="1507545222208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../6. Happy tickets" />
-    <SUITE FILE_PATH="coverage/3___Sort_Triangles$tests_triangle.coverage" NAME="tests_triangle Coverage Results" MODIFIED="1507546512022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/3___Sort_Triangles$Triangles2.coverage" NAME="Triangles2 Coverage Results" MODIFIED="1507545895004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/3___Sort_Triangles$tests_triangle.coverage" NAME="tests_triangle Coverage Results" MODIFIED="1507578054932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3___Sort_Triangles$Envelopes2.coverage" NAME="Envelopes2 Coverage Results" MODIFIED="1507558482270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../2. Envelopes" />
+    <SUITE FILE_PATH="coverage/3___Sort_Triangles$Triangles2.coverage" NAME="Triangles2 Coverage Results" MODIFIED="1507577861223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3___Sort_Triangles$Triangles.coverage" NAME="Triangles Coverage Results" MODIFIED="1507409923133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Triangles2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Triangles2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tests_triangle.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests_triangle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="1080">
+              <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -56,8 +46,8 @@
         <option value="$PROJECT_DIR$/../2. Envelopes/Envelopes.py" />
         <option value="$PROJECT_DIR$/../6. Happy tickets/Tickets2.py" />
         <option value="$PROJECT_DIR$/Triangles.py" />
-        <option value="$PROJECT_DIR$/Triangles2.py" />
         <option value="$PROJECT_DIR$/../2. Envelopes/Envelopes2.py" />
+        <option value="$PROJECT_DIR$/Triangles2.py" />
         <option value="$PROJECT_DIR$/tests_triangle.py" />
       </list>
     </option>
@@ -69,10 +59,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="62" />
+    <option name="x" value="65" />
     <option name="y" value="25" />
     <option name="width" value="1493" />
-    <option name="height" value="1038" />
+    <option name="height" value="967" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -140,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Envelopes2">
+  <component name="RunManager" selected="Python.tests_triangle">
     <configuration name="Envelopes2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -240,9 +230,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Envelopes2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.tests_triangle" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Triangles2" />
+        <item index="0" class="java.lang.String" itemvalue="Python.tests_triangle" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Triangles2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Envelopes2" />
         <item index="3" class="java.lang.String" itemvalue="Python.Tickets2" />
         <item index="4" class="java.lang.String" itemvalue="Python.Triangles" />
       </list>
@@ -265,14 +255,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="25" width="1493" height="1038" extended-state="0" />
+    <frame x="65" y="25" width="1493" height="967" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11855325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3436831" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25840092" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -367,14 +357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Triangles2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../2. Envelopes/Envelopes2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -383,10 +365,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/lib/python3.5/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1308">
+          <caret line="700" column="8" lean-forward="false" selection-start-line="700" selection-start-column="8" selection-end-line="700" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Triangles2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests_triangle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="1080">
+          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
