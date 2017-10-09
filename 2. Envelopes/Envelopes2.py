@@ -1,5 +1,7 @@
 class Envelope:
-    def __init__(self, aa, bb):
+    def __init__(self, aa: float, bb: float):
+        if type(aa) != float or type(bb) != float:
+            raise TypeError
         if aa <= 0 or bb <= 0:
             raise ValueError
         self.__a = aa
@@ -42,6 +44,13 @@ if __name__ == '__main__':
         except ValueError:
             print('Error of value types. Sides of the envelopes must be '
                   'positive numbers')
+            if restart_program():
+                continue
+            else:
+                break
+        except TypeError:
+            print('Error of input types. Sides of envelopes must be positive '
+                  'numbers')
             if restart_program():
                 continue
             else:

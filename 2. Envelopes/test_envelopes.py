@@ -7,6 +7,9 @@ class TestClassEnvelope(unittest.TestCase):
         self.assertEqual(self.env.a, 5)
         self.assertEqual(self.env.b, 6)
 
+    def test_except_side_type_error(self):
+        self.env1 = Envelope('a', 4)
+
     def test_except_side_less_zero(self):
         with self.assertRaises(ValueError):
             self.env1 = Envelope(-2, 5)
