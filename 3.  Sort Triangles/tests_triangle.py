@@ -1,6 +1,6 @@
 import unittest
-from Triangles2 import Triangle
-from Triangles2 import NotTriangleError
+from triangles2 import Triangle
+from triangles2 import NotTriangleError
 
 
 class TestClassTriangle(unittest.TestCase):
