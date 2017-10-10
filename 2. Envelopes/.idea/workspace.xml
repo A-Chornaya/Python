@@ -10,8 +10,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/2__Envelopes$Envelopes2.coverage" NAME="Envelopes2 Coverage Results" MODIFIED="1507562079868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/2__Envelopes$Unittests_in_test_envelopes_py.coverage" NAME="Unittests in test_envelopes.py Coverage Results" MODIFIED="1507559831369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/2__Envelopes$Envelopes2.coverage" NAME="Envelopes2 Coverage Results" MODIFIED="1507644927364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/2__Envelopes$Unittests_in_test_envelopes_py.coverage" NAME="Unittests in test_envelopes.py Coverage Results" MODIFIED="1507645090955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/2__Envelopes$Envelopes.coverage" NAME="Envelopes Coverage Results" MODIFIED="1506971222591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -19,8 +19,8 @@
       <file leaf-file-name="Envelopes2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Envelopes2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="51" column="59" lean-forward="false" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+            <state relative-caret-position="90">
+              <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -29,8 +29,20 @@
       <file leaf-file-name="test_envelopes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_envelopes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+            <state relative-caret-position="1134">
+              <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests_triangle.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../3.  Sort Triangles/tests_triangle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-360">
+              <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="30" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -66,7 +78,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="122" />
     <option name="y" value="21" />
     <option name="width" value="1509" />
@@ -147,7 +159,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Envelopes2">
+  <component name="RunManager" selected="Python tests.Unittests in test_envelopes.py">
     <configuration name="Envelopes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -206,8 +218,8 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.Envelopes2" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_envelopes.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_envelopes.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Envelopes2" />
         <item index="2" class="java.lang.String" itemvalue="Python.Envelopes" />
       </list>
     </recent_temporary>
@@ -229,12 +241,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_envelopes_py - 2017.10.09 at 17h 23m 25s.xml">
-      <configuration name="Unittests in test_envelopes.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_envelopes_py - 2017.10.09 at 17h 27m 04s.xml">
-      <configuration name="Unittests in test_envelopes.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_envelopes_py - 2017.10.09 at 17h 28m 12s.xml">
       <configuration name="Unittests in test_envelopes.py" configurationId="tests" />
     </history-entry>
@@ -244,20 +250,42 @@
     <history-entry file="Unittests_in_test_envelopes_py - 2017.10.09 at 17h 37m 12s.xml">
       <configuration name="Unittests in test_envelopes.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_envelopes_py - 2017.10.10 at 11h 00m 34s.xml">
+      <configuration name="Unittests in test_envelopes.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_envelopes_py - 2017.10.10 at 11h 02m 10s.xml">
+      <configuration name="Unittests in test_envelopes.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_envelopes_py - 2017.10.10 at 12h 23m 36s.xml">
+      <configuration name="Unittests in test_envelopes.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_envelopes_py - 2017.10.10 at 17h 13m 34s.xml">
+      <configuration name="Unittests in test_envelopes.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_envelopes_py - 2017.10.10 at 17h 16m 46s.xml">
+      <configuration name="Unittests in test_envelopes.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_envelopes_py - 2017.10.10 at 17h 18m 02s.xml">
+      <configuration name="Unittests in test_envelopes.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_envelopes_py - 2017.10.10 at 17h 18m 11s.xml">
+      <configuration name="Unittests in test_envelopes.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="122" y="21" width="1509" height="1013" extended-state="0" />
+    <frame x="65" y="-4" width="1535" height="1100" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23989397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23583062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34543455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31526104" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32497388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3995984" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -319,18 +347,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../3.  Sort Triangles/tests_triangle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Envelopes2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="51" column="59" lean-forward="false" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+        <state relative-caret-position="90">
+          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_envelopes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        <state relative-caret-position="1134">
+          <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

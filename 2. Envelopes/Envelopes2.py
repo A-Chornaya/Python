@@ -24,8 +24,7 @@ class Envelope:
             return False
 
 
-def restart_program():
-    answer = input('Do you want to continue? (enter "y" or "yes" if want):')
+def restart_program(answer: str):
     if answer.lower() == 'y' or 'yes' == answer.lower():
         return True
     else:
@@ -51,7 +50,9 @@ if __name__ == '__main__':
         except TypeError:
             print('Error of input types. Sides of envelopes must be positive '
                   'numbers')
-            if restart_program():
+            answer = input(
+                'Do you want to continue? (enter "y" or "yes" if want):')
+            if restart_program(answer):
                 continue
             else:
                 break
@@ -66,7 +67,9 @@ if __name__ == '__main__':
             else:
                 print('Envelopes don`t fit to each other')
 
-            if restart_program():
+            answer = input(
+                'Do you want to continue? (enter "y" or "yes" if want):')
+            if restart_program(answer):
                 continue
             else:
                 break
