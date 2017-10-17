@@ -1,0 +1,16 @@
+<h2>Меню</h2>
+<div>
+{% if dishes %}
+    <ul>
+    {% for dish in dishes %}
+        <li>{{dish.dish_name}}: {{dish.price}} грн</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No dishes in the Menu</p>
+{% endif %}
+<br>
+<p>
+    <em><a href="/sushi_rinjin/">Назад на главную</a></em>
+</p>
+</div>
