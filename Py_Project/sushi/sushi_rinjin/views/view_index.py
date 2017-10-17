@@ -1,6 +1,6 @@
 from django.shortcuts import render
-
 from sushi_rinjin.models.menu import Menu
+
 
 def index(request):
     context = {
