@@ -1,11 +1,11 @@
 <h3>Заказы</h3>
 <div>
-    {% if orders %}
+    {% if result_list %}
         <ul>
-        {% for obj in orders %}
-            <li> Заказ №{{ obj.0 }}, {{ obj.1.0.user_id__user_name }}.
-                Состав заказа: {{  order_list_list }}</li>
-            <br>
+        {% for res in result_list %}
+        <li>
+            Заказ № {{ res.0 }} на имя {{ res.1 }}. Состав заказа: {{ res.2 }}
+        </li>
         {% endfor %}
         </ul>
     {% else %}
