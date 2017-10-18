@@ -1,0 +1,21 @@
+<h2>Ингредиенты</h2>
+<div>
+    {% if ingred_list %}
+        <ul>
+        {% for ing in ingred_list %}
+            <li>{{ing.ingredient}}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dishes in the Menu</p>
+    {% endif %}
+    <p>
+        <u>Все самое свежее для Вас ;)</u>
+    </p>
+    <br>
+    <p>
+        <em>
+            <a href="/sushi_rinjin">Назад на главную</a>
+        </em>
+    </p>
+</div>
