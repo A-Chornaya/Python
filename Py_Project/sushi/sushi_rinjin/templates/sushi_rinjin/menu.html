@@ -3,7 +3,14 @@
     {% if dishes %}
         <ul>
         {% for dish in dishes %}
-            <li>{{dish.dish_name}}: {{dish.price}} грн </li>
+            <li>{{dish.dish_name}}: {{dish.price}} грн, состоит из:
+                <ul type = 'disk'>
+                    {% for ing in dish.ingredients.all %}
+                        <li>{{ ing.ingredient }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+            <br>
         {% endfor %}
         </ul>
     {% else %}
