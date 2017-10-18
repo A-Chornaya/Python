@@ -4,6 +4,12 @@ from sushi_rinjin.models.users_data import UsersData
 
 
 class Order(models.Model):
-    pay = models.BooleanField(default=False)
-    pay_method_id = models.ForeignKey(PaymentMethod)
+    PAY_METHOD_CHOISES = (
+        ('CASH', 'cash'),
+        ('CREDIT', 'credit card'),
+        ('CHECK', 'check'),
+    )
+    pay_method = models.CharField(max_length=15, choices=PAY_METHOD_CHOISES,
+                                  default='cash')
     user_id = models.ForeignKey(UsersData)
+    pay = models.BooleanField(default=False)

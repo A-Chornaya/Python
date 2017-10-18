@@ -1,0 +1,18 @@
+<h3>Заказы</h3>
+<div>
+    {% if orders %}
+        <ul>
+        {% for obj in orders %}
+            <li> Заказ №{{ obj.0 }}, {{ obj.1.0.user_id__user_name }}.
+                Состав заказа: {{  order_list_list }}</li>
+            <br>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No orders</p>
+    {% endif %}
+    <br>
+    <p>
+        <em><a href="/sushi_rinjin/">Назад на главную</a></em>
+    </p>
+</div>
