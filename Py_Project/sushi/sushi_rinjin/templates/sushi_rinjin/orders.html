@@ -1,10 +1,11 @@
-<h3>Заказы</h3>
+<h3>Orders</h3>
 <div>
     {% if result_list %}
         <ul>
         {% for res in result_list %}
-        <li>
-            Заказ № {{ res.0 }} на имя {{ res.1 }}. Состав заказа: {{ res.2 }}
+        <li><a href="/sushi_rinjin/order/{{ res.0 }}/"> Order № {{ res.0 }},
+        </a>
+            client {{ res.1 }}, {{ res.2 }} with {{ res.3 }}
         </li>
         {% endfor %}
         </ul>
@@ -13,6 +14,6 @@
     {% endif %}
     <br>
     <p>
-        <em><a href="/sushi_rinjin/">Назад на главную</a></em>
+        <em><a href="/sushi_rinjin/">Back to main page</a></em>
     </p>
 </div>

@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'menu/', view_menu.index, name='menu'),
     url(r'ingredients/', view_ingred.index, name='ingredients'),
     url(r'orders/', view_order.index, name='orders'),
+    url(r'^order/(?P<id_order>[0-9]+)/$', view_order.detail, name='detail'),
 ]

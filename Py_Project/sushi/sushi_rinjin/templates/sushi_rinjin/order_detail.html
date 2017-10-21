@@ -1,0 +1,11 @@
+<h2>List of order №{{ id_order }}</h2>
+<ul>
+{% for order in order_list %}
+    <li>Dish {{ order.dish_id.dish_name }} in amount
+        {{ order.amount }}</li>
+{% endfor %}
+</ul>
+    <br>
+    <p>
+        <em><a href="/sushi_rinjin/orders/">Back to orders</a></em>
+    </p>
