@@ -13,3 +13,10 @@ class Order(models.Model):
                                   default='cash')
     user_id = models.ForeignKey(UsersData)
     pay = models.BooleanField(default=False)
+
+    def pay_or_not(self):
+        if self.pay:
+            result = 'paid'
+        else:
+            result = 'not paid'
+        return result

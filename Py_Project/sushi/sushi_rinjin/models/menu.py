@@ -6,3 +6,7 @@ class Menu(models.Model):
     dish_name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=4, decimal_places=2)
     ingredients = models.ManyToManyField(Ingredients)
+
+    @property
+    def __str__(self):
+        return self.dish_name
