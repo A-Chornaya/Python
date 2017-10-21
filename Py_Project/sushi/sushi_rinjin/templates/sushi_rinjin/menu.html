@@ -1,9 +1,9 @@
-<h2>Меню</h2>
+<h2>Menu</h2>
 <div>
     {% if dishes %}
         <ul>
         {% for dish in dishes %}
-            <li>{{dish.dish_name}}: {{dish.price}} грн, состоит из:
+            <li>{{dish.dish_name}}: {{dish.price}} grn, consist of:
                 <ul type = 'disk'>
                     {% for ing in dish.ingredients.all %}
                         <li>{{ ing.ingredient }}</li>
@@ -18,6 +18,6 @@
     {% endif %}
     <br>
     <p>
-        <em><a href="/sushi_rinjin/">Назад на главную</a></em>
+        <em><a href="/sushi_rinjin/">Back to main page</a></em>
     </p>
 </div>
