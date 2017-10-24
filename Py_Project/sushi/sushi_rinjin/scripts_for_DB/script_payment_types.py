@@ -1,5 +1,5 @@
 import django
-django.setup()
+#django.setup()
 
 from sushi_rinjin.models.payment_method import PaymentMethod
 
