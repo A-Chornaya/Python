@@ -1,0 +1,5 @@
+<form action="{% url 'sushi_rinjin:order_add'  %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Add Order" />
+</form>
