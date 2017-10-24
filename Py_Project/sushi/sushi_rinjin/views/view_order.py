@@ -1,7 +1,9 @@
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render
-from sushi_rinjin.models.order import Order
-from sushi_rinjin.models.order_list import OrderList
+from sushi_rinjin.models.order import Order, OrderForm
+from sushi_rinjin.models.order_list import OrderList, OrderListForm
+from django.views import generic
+from django.urls import reverse
 
 
 def index(request):
@@ -27,3 +29,38 @@ def detail(request, id_order):
     context = {'id_order': id_order,
                'order_list': order_list}
     return render(request, 'sushi_rinjin/order_detail.html', context)
+
+
+def order_add(request):
+    if request.method == 'POST':
+        form_order = OrderForm(request.POST)
+        if form_order.is_valid():
+            form_order.save()
+        return HttpResponseRedirect('/sushi_rinjin/orders/')
+    else:
+        form_order = OrderForm()
+        return render(request, 'sushi_rinjin/forms/order_add.html',
+                      {'form': form_order})
+
+
+def order_detail_add(request, id_order):
+    if request.method == 'POST':
+        form_order_detail = OrderListForm(request.POST)
+        if form_order_detail.is_valid():
+            form_detail = form_order_detail.save(commit=False)
+            form_detail.order_id = Order.objects.get(id=id_order)
+            form_detail.save()
+        return HttpResponseRedirect(reverse('sushi_rinjin:detail', args=(
+            id_order,)))
+    else:
+        form_order_detail = OrderListForm()
+        return render(request, 'sushi_rinjin/forms/order_detail_add.html',
+                      {'form': form_order_detail,
+                       'id_order': id_order})
+
+
+class OrderFormCreate(generic.CreateView):
+    model = Order
+    fields = '__all__'
+    template_name = 'sushi_rinjin/forms/order_add.html'
+    success_url = '../../sushi_rinjin'

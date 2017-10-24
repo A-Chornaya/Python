@@ -5,6 +5,9 @@
         {{ order.amount }}</li>
 {% endfor %}
 </ul>
+    <p><a href="{% url 'sushi_rinjin:order_detail_add' id_order %}">Add
+        another order detail</a>
+    </p>
     <br>
     <p>
         <em><a href="/sushi_rinjin/orders/">Back to orders</a></em>
