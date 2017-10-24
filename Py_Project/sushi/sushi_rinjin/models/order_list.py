@@ -5,7 +5,7 @@ from django.forms import ModelForm
 
 
 class OrderList(models.Model):
-    order_id = models.ForeignKey(Order, on_delete=models.CASCADE)
+    order_id = models.ForeignKey(Order)
     dish_id = models.ForeignKey(Menu)
     amount = models.PositiveSmallIntegerField(default=1)
 

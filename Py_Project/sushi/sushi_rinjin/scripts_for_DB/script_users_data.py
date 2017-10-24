@@ -1,5 +1,5 @@
 import django
-#django.setup()
+django.setup()
 
 from sushi_rinjin.models.users_data import UsersData
 
@@ -20,3 +20,5 @@ def add_users():
     for obj in list_of_users:
         obj.save()
 
+
+add_users()
