@@ -1,9 +1,7 @@
 import django
-django.setup()
+#django.setup()
 
 from sushi_rinjin.models.ingredients import Ingredients
-
-
 
 
 def add_ingredients():
@@ -32,5 +30,3 @@ def add_ingredients():
     for obj in list_of_ingredients:
         obj.save()
 
-
-add_ingredients()
