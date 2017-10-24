@@ -1,7 +1,8 @@
 <h2>Ingredients</h2>
 <div>
+    <p><a href="/sushi_rinjin/ingredient_add/">Add new ingredient</a></p>
     {% if ingred_list %}
-        <ul>
+        <ul type="square">
         {% for ing in ingred_list %}
             <li>{{ing.ingredient}}</li>
         {% endfor %}
