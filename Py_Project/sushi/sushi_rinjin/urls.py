@@ -12,4 +12,10 @@ urlpatterns = [
     url(r'ingredients/', view_ingred.index, name='ingredients'),
     url(r'orders/', view_order.index, name='orders'),
     url(r'^order/(?P<id_order>[0-9]+)/$', view_order.detail, name='detail'),
+    url(r'ingredient_add/', view_ingred.ingred_add, name='add_ingred'),
+    url(r'dish_add/', view_menu.dish_add, name='add_dish'),
+    url(r'order_add/', view_order.order_add,
+        name='order_add'),
+    url(r'^order/(?P<id_order>[0-9]+)/add$', view_order.order_detail_add,
+        name='order_detail_add'),
 ]
