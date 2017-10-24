@@ -1,5 +1,5 @@
-<h3>Choose an ingredient that you want to edit</h3>
-<form action="{% url 'sushi_rinjin:choose_ingred' %}" method="post">
+<h3>Choose a dish that you want to edit</h3>
+<form action="{% url 'sushi_rinjin:edit_menu' %}" method="post">
     {% csrf_token %}
     {{ form }}
     <p>

@@ -18,3 +18,7 @@ class MenuForm(ModelForm):
         model = Menu
         fields = '__all__'
         widgets = {'ingredients': forms.CheckboxSelectMultiple}
+
+
+class EditMenuForm(forms.Form):
+    dish_for_edit = forms.ModelChoiceField(queryset=Menu.objects.all())

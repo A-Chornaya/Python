@@ -1,5 +1,5 @@
 import django
-django.setup()
+#django.setup()
 
 from sushi_rinjin.models.order_list import OrderList
 from sushi_rinjin.models.order import Order
@@ -12,10 +12,10 @@ def add_order_list():
     order2 = Order.objects.get(id='2')
     order3 = Order.objects.get(id='3')
 
-    dish1 = Menu.objects.get(id='1')
-    dish2 = Menu.objects.get(id='2')
-    dish3 = Menu.objects.get(id='3')
-    dish4 = Menu.objects.get(id='5')
+    dish1 = Menu.objects.get(dish_name='Rolls Filadelfia')
+    dish2 = Menu.objects.get(dish_name='Rolls Kalifornia')
+    dish3 = Menu.objects.get(dish_name='Rolls Eel')
+    dish4 = Menu.objects.get(dish_name='Sushi Shrimp')
 
     list_of_orders.append(OrderList(order_id=order1, dish_id=dish1, amount=2))
     list_of_orders.append(OrderList(order_id=order2, dish_id=dish2))
@@ -26,6 +26,3 @@ def add_order_list():
 
     for obj in list_of_orders:
         obj.save()
-
-
-add_order_list()
