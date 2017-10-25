@@ -1,0 +1,29 @@
+<h3>Some queries</h3>
+<form action="{% url 'sushi_rinjin:query_list' %}" method="post">
+    {% csrf_token %}
+    <ol>
+        <li>Choose an ingridient to see the dishes that contain this
+            ingredient</li>
+         {{ form_ingreds }}
+        <p>
+            <input type="submit" value="Choose ingredient" name="_ingreds"/>
+        </p>
+        <br>
+        <li>Type a price and see the dishes, witch price less</li>
+        {{ form_price }}
+        <p>
+            <input type="submit" value="See dishes" name="_price"/>
+        </p>
+        <br>
+        <li>Choose a user to see his orders</li>
+        {{ form_user_order }}
+        <p>
+            <input type="submit" value="See user`s orders" name="_user_order"/>
+        </p>
+    </ol>
+
+    <br>
+    <p>
+        <em><a href="/sushi_rinjin/">Back to main page</a></em>
+    </p>
+</form>

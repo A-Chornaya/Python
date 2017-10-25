@@ -3,6 +3,7 @@ from sushi_rinjin.views import view_index
 from sushi_rinjin.views import view_menu
 from sushi_rinjin.views import view_ingred
 from sushi_rinjin.views import view_order
+from sushi_rinjin.views import view_queries
 
 app_name = 'sushi_rinjin'
 
@@ -24,4 +25,5 @@ urlpatterns = [
     url(r'^ingredients/edit/$', view_ingred.choose_ingred, name='choose_ingred'),
     url(r'^ingredients/edit/(?P<id_ingred>[0-9]+)/$', view_ingred.edit_ingred,
         name='edit_ingred'),
+    url(r'^queries/$', view_queries.list_query, name='query_list'),
 ]

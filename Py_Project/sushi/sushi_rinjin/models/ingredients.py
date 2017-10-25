@@ -17,9 +17,7 @@ class IngredientsForm(ModelForm):
 
 
 class EditIngredForm(forms.Form):
-    # list_ing = list()
-    # for obj in Ingredients.objects.all():
-    #     list_ing.append([obj.ingredient, obj.ingredient])
     ingred_for_edit = forms.ModelChoiceField(
-         queryset=Ingredients.objects.all())
-    #ingred_for_edit = forms.Select(choices=tuple(list_ing))
+        queryset=Ingredients.objects.all(), empty_label=None,
+        widget=forms.RadioSelect,
+        label='Ingredients')

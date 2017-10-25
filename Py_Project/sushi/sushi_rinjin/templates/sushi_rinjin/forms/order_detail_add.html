@@ -1,4 +1,9 @@
 <h3>Add detail for order №{{ id_order }}</h3>
+{% for message in messages %}
+    <p class="{{ message.tags }}">
+    {% if 'amount_error' in message.tags %}{{ message|safe }}{% endif %}
+    </p>
+{% endfor %}
 <form action="{% url 'sushi_rinjin:order_detail_add'  id_order %}"
       method="post">
     {% csrf_token %}

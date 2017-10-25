@@ -1,0 +1,18 @@
+<h3>Query 'Dishes that have price less than {{ price }}'</h3>
+
+<div>
+    {% if dishes %}
+        <ul type="square">
+        {% for dish in dishes %}
+            <li>{{dish.dish_name}}: {{dish.price}} grn</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dishes with price less {{ price }}</p>
+    {% endif %}
+    <br>
+    <p>
+        <em><a href="{% url 'sushi_rinjin:query_list' %}">Back to page with
+            queries</a></em>
+    </p>
+</div>

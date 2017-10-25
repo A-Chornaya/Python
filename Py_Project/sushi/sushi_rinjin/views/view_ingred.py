@@ -31,8 +31,6 @@ def choose_ingred(request):
         form_edit_ingred = EditIngredForm(request.POST)
         if form_edit_ingred.is_valid():
             ingred_for_edit = form_edit_ingred.cleaned_data['ingred_for_edit']
-            #ingred = form_edit_ingred.cleaned_data['ingred_for_edit']
-            #ingred_for_edit = Ingredients.objects.get(ingredient=ingred)
             if '_edit' in request.POST:
                 return HttpResponseRedirect(reverse('sushi_rinjin:edit_ingred',
                                             args=(ingred_for_edit.id,)))
@@ -58,4 +56,4 @@ def edit_ingred(request, id_ingred):
         return render(request, 'sushi_rinjin/forms/edit_ingred.html',
                       {'form': form_edit_ingred,
                        'id_ingred': id_ingred,
-                       'name_dish': name_ingred})
+                       'name_ingred': name_ingred})

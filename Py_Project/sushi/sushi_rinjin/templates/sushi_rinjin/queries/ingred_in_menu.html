@@ -1,0 +1,18 @@
+<h3>Query 'Dishes that have ingredient {{ ingred_name }}'</h3>
+
+<div>
+    {% if dishes %}
+        <ul type="square">
+        {% for dish in dishes %}
+            <li>{{dish.dish_name}}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dishes with ingredient {{ ingred_name }}</p>
+    {% endif %}
+    <br>
+    <p>
+        <em><a href="{% url 'sushi_rinjin:query_list' %}">Back to page with
+            queries</a></em>
+    </p>
+</div>
