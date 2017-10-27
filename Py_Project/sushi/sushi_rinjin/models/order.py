@@ -1,6 +1,7 @@
 from django.db import models
 from django.forms import ModelForm
-from sushi_rinjin.models.users_data import UsersData
+#from sushi_rinjin.models.users_data import UsersDataProfile
+from django.contrib.auth.models import User
 
 
 class Order(models.Model):
@@ -11,7 +12,8 @@ class Order(models.Model):
     )
     pay_method = models.CharField(max_length=15, choices=PAY_METHOD_CHOISES,
                                   default='cash')
-    user_id = models.ForeignKey(UsersData)
+    #user_id = models.ForeignKey(UsersDataProfile)
+    user_id = models.ForeignKey(User)
     pay = models.BooleanField(default=False)
 
     def __str__(self):

@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 from sushi_rinjin.models.menu import Menu
 from sushi_rinjin.models.menu import MenuForm
 from sushi_rinjin.models.menu import EditMenuForm
-from django.urls import reverse
+
 
 
 def index(request):
@@ -12,6 +14,7 @@ def index(request):
     return render(request, 'sushi_rinjin/menu.html', context)
 
 
+@login_required
 def dish_add(request):
     if request.method == 'POST':
         form_menu = MenuForm(request.POST)
@@ -24,6 +27,7 @@ def dish_add(request):
                       {'form': form_menu})
 
 
+@login_required
 def edit_menu(request):
     if request.method == 'POST':
         form_edit_menu = EditMenuForm(request.POST)
@@ -33,6 +37,7 @@ def edit_menu(request):
                 return HttpResponseRedirect(reverse('sushi_rinjin:edit_dish',
                                             args=(dish_for_edit.id,)))
             if '_delete' in request.POST:
+                #dish_for_edit.ingredients.clear()
                 dish_for_edit.delete()
         return HttpResponseRedirect('/sushi_rinjin/menu/')
     else:
@@ -41,6 +46,7 @@ def edit_menu(request):
                       {'form': form_edit_menu})
 
 
+@login_required
 def edit_dish(request, id_dish):
     dish = Menu.objects.get(id=id_dish)
     name_dish = dish.dish_name

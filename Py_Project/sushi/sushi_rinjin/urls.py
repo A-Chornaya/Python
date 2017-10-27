@@ -1,13 +1,21 @@
 from django.conf.urls import url
+from django.contrib.auth import views as auth_views
+from django.contrib.auth.decorators import login_required
 from sushi_rinjin.views import view_index
 from sushi_rinjin.views import view_menu
 from sushi_rinjin.views import view_ingred
 from sushi_rinjin.views import view_order
 from sushi_rinjin.views import view_queries
+from sushi_rinjin.views import view_user
 
 app_name = 'sushi_rinjin'
 
 urlpatterns = [
+    url(r'^accounts/login/$', auth_views.login, {'template_name':
+        'sushi_rinjin/registration/login.html'}, name='login'),
+    url(r'^accounts/logout$', auth_views.logout,
+        {'next_page': '/sushi_rinjin/'}, name='logout'),
+    url(r'^accounts/signin$', view_user.signup, name='signup'),
     url(r'^$', view_index.index, name='index'),
     url(r'^menu/$', view_menu.index, name='menu'),
     url(r'^ingredients/$', view_ingred.index, name='ingredients'),
