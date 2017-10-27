@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sushi Rinjin</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+     <div class="page-header">
+         <div class="login_zone">
+             <span id="login_label">
+                 <a href="{% url 'sushi_rinjin:login' %}">Log in</a>
+             </span>
+             <span id="logout_label">
+                 <a href="{% url 'sushi_rinjin:logout' %}">Log out</a>
+             </span>
+         </div>
+         <div class="head_title">
+            <h1 style="">
+                Sushi delivery &quot;Rinjin&quot;
+            </h1>
+        </div>
+
+         <div class="menu">
+
+         </div>
+    </div>
+    <div class="content container">
+        <div class="block_content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.head_title {
+    background:lightseagreen;
+    text-align: center;
+    font-size:22px;
+    font-family:comic sans ms, cursive;
+    padding: 10px;
+}
+
+.login_zone {
+  float: right;
+  margin-top:10px;
+  padding:10px;
+}
+
+#login_label {
+    width: 70px;
+    background:lightgreen;
+    padding:10px;
+}
+
+#logout_label {
+    width: 70px;
+    background:skyblue;
+    padding:10px;
+}
+
+#sign_up {
+    width: 70px;
+    background:springgreen;
+    padding:13px;
+}
