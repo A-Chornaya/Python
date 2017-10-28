@@ -1,7 +1,18 @@
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
+
 <h2>Ingredients</h2>
 <div>
-    <p><a href="{% url 'sushi_rinjin:add_ingred' %}">Add new ingredient</a></p>
-    <p><a href="{% url 'sushi_rinjin:choose_ingred' %}">Edit igredients</a></p>
+    {% if user.username %}
+        <p>
+            <a href="{% url 'sushi_rinjin:add_ingred' %}">Add new ingredient</a>
+        </p>
+        <p>
+            <a href="{% url 'sushi_rinjin:choose_ingred' %}">Edit igredients</a>
+        </p>
+    {% endif %}
+
     {% if ingred_list %}
         <ul type="square">
         {% for ing in ingred_list %}
@@ -21,3 +32,5 @@
         </em>
     </p>
 </div>
+
+{% endblock %}

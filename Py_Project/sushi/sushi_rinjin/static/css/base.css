@@ -1,9 +1,12 @@
-.head_title {
+.page_header {
     background:lightseagreen;
+    padding: 10px;
+}
+
+.head_title {
     text-align: center;
     font-size:22px;
     font-family:comic sans ms, cursive;
-    padding: 10px;
 }
 
 .login_zone {
@@ -29,3 +32,23 @@
     background:springgreen;
     padding:13px;
 }
+
+#user_part {
+  float: right;
+  margin-top:2px;
+}
+
+#promo {
+    font-size:20px;
+    font-style: italic;
+}
+
+#home a {
+    text-decoration: none;
+    color: indigo;
+}
+
+#home a:hover {
+    text-decoration: none;
+    color: black;
+   }

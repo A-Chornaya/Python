@@ -7,7 +7,6 @@ from sushi_rinjin.models.menu import MenuForm
 from sushi_rinjin.models.menu import EditMenuForm
 
 
-
 def index(request):
     list_of_dishes = Menu.objects.all()
     context = {'dishes': list_of_dishes}

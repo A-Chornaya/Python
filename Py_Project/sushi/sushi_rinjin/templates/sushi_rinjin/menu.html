@@ -1,6 +1,14 @@
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
+
 <h2>Menu</h2>
-<p><a href="{% url 'sushi_rinjin:add_dish' %}">Add new dish</a></p>
-<p><a href="{% url 'sushi_rinjin:edit_menu' %}">Edit Menu</a></p>
+
+    {% if user.username %}
+        <p><a href="{% url 'sushi_rinjin:add_dish' %}">Add new dish</a></p>
+        <p><a href="{% url 'sushi_rinjin:edit_menu' %}">Edit Menu</a></p>
+    {% endif %}
+
 <div>
     {% if dishes %}
         <ul>
@@ -23,3 +31,5 @@
         <em><a href="/sushi_rinjin/">Back to main page</a></em>
     </p>
 </div>
+
+{% endblock %}

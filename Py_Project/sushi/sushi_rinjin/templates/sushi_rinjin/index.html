@@ -1,31 +1,26 @@
 {% extends 'sushi_rinjin/base.html' %}
 
 {% block content %}
-<div>
-    <p>
-        <em>
-            <span style="font-size:20px">
-                Come to a neighbor on a sushi
-            </span>
-        </em>
-    </p>
-</div>
 
 <div>
 <ol>
     <li>
-        <a href="/sushi_rinjin/menu/">Menu - contains {{ menu_amount }}
-            dishes</a>
-    </li>
-    <li>
         <a href="/sushi_rinjin/ingredients/">What our dishes consist of</a>
     </li>
     <li>
-        <a href="/sushi_rinjin/orders/">Orders</a>
+        <a href="/sushi_rinjin/menu/">Menu - contains {{ menu_amount }}
+            dishes</a>
     </li>
+
+    {% if user.username %}
+        <li>
+            <a href="/sushi_rinjin/orders/">Orders</a>
+        </li>
+    {% endif %}
+
     <li>
         <a href="/sushi_rinjin/queries/">Form with queries</a>
     </li>
 </ol>
-</div>
+
 {% endblock %}

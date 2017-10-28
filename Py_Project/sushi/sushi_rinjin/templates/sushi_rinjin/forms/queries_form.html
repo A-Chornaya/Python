@@ -1,3 +1,7 @@
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
+
 <h3>Some queries</h3>
 <form action="{% url 'sushi_rinjin:query_list' %}" method="post">
     {% csrf_token %}
@@ -15,15 +19,18 @@
             <input type="submit" value="See dishes" name="_price"/>
         </p>
         <br>
+
+        {% if user.username %}
         <li>Choose a user to see his orders</li>
         {{ form_user_order }}
         <p>
             <input type="submit" value="See user`s orders" name="_user_order"/>
         </p>
+        {% endif %}
     </ol>
-
-    <br>
     <p>
         <em><a href="/sushi_rinjin/">Back to main page</a></em>
     </p>
 </form>
+
+{% endblock %}

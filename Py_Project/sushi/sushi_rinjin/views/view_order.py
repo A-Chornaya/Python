@@ -14,8 +14,10 @@ def index(request):
         raise Http404("Order does not exist")
     result_list = list()
     for ord in orders:
-        user = ord.user_id.user_name
-        result_list.append([ord.id, user, ord.pay_or_not, ord.pay_method])
+        user = ord.user_id.usersdataprofile.full_name()
+        result_list.append([ord.id, user, ord.pay_or_not, ord.pay_method,
+                            ord.user_id.usersdataprofile.tel,
+                            ord.user_id.usersdataprofile.address])
 
     return render(request, 'sushi_rinjin/orders.html',
                   {'result_list': result_list})

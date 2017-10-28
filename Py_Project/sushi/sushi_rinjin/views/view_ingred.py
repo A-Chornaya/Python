@@ -1,10 +1,11 @@
 from django.http import HttpResponseRedirect
-from sushi_rinjin.models.ingredients import Ingredients
-from sushi_rinjin.models.ingredients import IngredientsForm
-from sushi_rinjin.models.ingredients import EditIngredForm
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.contrib import messages
 from django.urls import reverse
+from sushi_rinjin.models.ingredients import Ingredients
+from sushi_rinjin.models.ingredients import IngredientsForm
+from sushi_rinjin.models.ingredients import EditIngredForm
 
 
 def index(request):
@@ -13,6 +14,7 @@ def index(request):
     return render(request, 'sushi_rinjin/ingredients.html', context)
 
 
+@login_required
 def ingred_add(request):
     if request.method == 'POST':
         form_ingred= IngredientsForm(request.POST)
@@ -26,6 +28,7 @@ def ingred_add(request):
                       {'form': form_ingred})
 
 
+@login_required
 def choose_ingred(request):
     if request.method == 'POST':
         form_edit_ingred = EditIngredForm(request.POST)
@@ -43,6 +46,7 @@ def choose_ingred(request):
                       {'form': form_edit_ingred})
 
 
+@login_required
 def edit_ingred(request, id_ingred):
     ingred = Ingredients.objects.get(id=id_ingred)
     name_ingred = ingred.ingredient

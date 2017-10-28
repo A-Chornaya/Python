@@ -2,7 +2,6 @@ from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from sushi_rinjin.models.users_data import UserForm
-from django.http import HttpResponseRedirect
 
 
 def signup(request):

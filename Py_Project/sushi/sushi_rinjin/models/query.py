@@ -1,5 +1,6 @@
 from django import forms
 from sushi_rinjin.models.ingredients import Ingredients
+from django.contrib.auth.models import User
 from sushi_rinjin.models.users_data import UsersDataProfile
 
 
@@ -14,5 +15,5 @@ class PriceDishForm(forms.Form):
 
 
 class UserOrderForm(forms.Form):
-    user = forms.ModelChoiceField(queryset=UsersDataProfile.objects.all(),
+    user = forms.ModelChoiceField(queryset=User.objects.all(),
                                   label='User', initial=1, empty_label=None)

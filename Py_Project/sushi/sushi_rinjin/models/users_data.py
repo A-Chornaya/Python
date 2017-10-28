@@ -16,27 +16,14 @@ class UsersDataProfile(models.Model):
     def __str__(self):
         return self.user.username
 
-    # @receiver(post_save, sender=User)
-    # def create_user_profile(sender, instance, created, **kwargs):
-    #     if created:
-    #         UsersDataProfile.objects.create(user=instance)
-    #
-    # @receiver(post_save, sender=User)
-    # def save_user_profile(sender, instance, **kwargs):
-    #     instance.usersdataprofile.save()
-
     @receiver(post_save, sender=User)
     def update_user_profile(sender, instance, created, **kwargs):
         if created:
             UsersDataProfile.objects.create(user=instance)
         instance.usersdataprofile.save()
 
-
-# class UsersProfileForm(ModelForm):
-#     class Meta:
-#         model = UsersDataProfile
-#         fields = ['tel', 'address']
-#         #users = User.objects.all().select_related('UsersProfileForm')
+    def full_name(self):
+        return self.user.first_name + ' ' + self.user.last_name
 
 
 class UserForm(UserCreationForm):

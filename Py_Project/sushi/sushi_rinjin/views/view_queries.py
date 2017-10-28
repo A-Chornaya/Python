@@ -45,7 +45,7 @@ def list_query(request):
                     total_cost += cost
                 return render(request,
                               'sushi_rinjin/queries/user_orders.html',
-                              {'user_name': user.user_name,
+                              {'user_name': user.usersdataprofile.full_name(),
                                'user_orders': list_order_cost,
                                'total_cost': total_cost})
     else:

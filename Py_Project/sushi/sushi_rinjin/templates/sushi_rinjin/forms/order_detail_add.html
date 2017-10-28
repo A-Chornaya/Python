@@ -1,3 +1,7 @@
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
+
 <h3>Add detail for order №{{ id_order }}</h3>
 {% for message in messages %}
     <p class="{{ message.tags }}">
@@ -10,3 +14,5 @@
     {{ form }}
     <p><input type="submit" value="Add detail for order" /></p>
 </form>
+
+{% endblock %}
