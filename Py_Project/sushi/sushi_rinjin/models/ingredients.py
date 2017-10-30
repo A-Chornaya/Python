@@ -1,6 +1,7 @@
 from django.db import models
 from django import forms
 from django.forms import ModelForm
+from rest_framework import serializers
 
 
 class Ingredients(models.Model):
@@ -21,3 +22,9 @@ class EditIngredForm(forms.Form):
         queryset=Ingredients.objects.all(), empty_label=None,
         widget=forms.RadioSelect,
         label='Ingredients')
+
+
+class IngredSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ingredients
+        fields = ('id', 'ingredient')

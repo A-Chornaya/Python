@@ -1,12 +1,13 @@
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
-from django.contrib.auth.decorators import login_required
+from rest_framework.urlpatterns import format_suffix_patterns
 from sushi_rinjin.views import view_index
 from sushi_rinjin.views import view_menu
 from sushi_rinjin.views import view_ingred
 from sushi_rinjin.views import view_order
 from sushi_rinjin.views import view_queries
 from sushi_rinjin.views import view_user
+from sushi_rinjin.views import view_ingred_rest
 
 app_name = 'sushi_rinjin'
 
@@ -34,4 +35,13 @@ urlpatterns = [
     url(r'^ingredients/edit/(?P<id_ingred>[0-9]+)/$', view_ingred.edit_ingred,
         name='edit_ingred'),
     url(r'^queries/$', view_queries.list_query, name='query_list'),
+
+    url(r'^ingred/$', view_ingred_rest.IngredList.as_view(),
+        name='ingred'),
+    url(r'^ingred/(?P<pk>[0-9]+)/$', view_ingred_rest.IngredDetail.as_view(),
+        name='ingred_redact_rest'),
+    url(r'^ingred_rest/$', view_ingred_rest.ingred_rest, name='ingred_rest'),
+
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
