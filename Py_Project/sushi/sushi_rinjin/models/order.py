@@ -1,6 +1,7 @@
 from django.db import models
 from django.forms import ModelForm
 #from sushi_rinjin.models.users_data import UsersDataProfile
+from rest_framework import serializers
 from django.contrib.auth.models import User
 
 
@@ -32,3 +33,9 @@ class OrderForm(ModelForm):
         model = Order
         fields = ['user_id', 'pay_method', 'pay']
         labels = {'user_id': 'User'}
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = '__all__'

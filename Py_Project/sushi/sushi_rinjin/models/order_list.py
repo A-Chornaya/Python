@@ -1,4 +1,5 @@
 from django.db import models
+from rest_framework import serializers
 from sushi_rinjin.models.order import Order
 from sushi_rinjin.models.menu import Menu
 from django.forms import ModelForm
@@ -11,6 +12,13 @@ class OrderList(models.Model):
 
 
 class OrderListForm(ModelForm):
+    class Meta:
+        model = OrderList
+        fields = ['dish_id', 'amount']
+        labels = {'dish_id': 'Dish'}
+
+
+class OrderListEditSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrderList
         fields = ['dish_id', 'amount']

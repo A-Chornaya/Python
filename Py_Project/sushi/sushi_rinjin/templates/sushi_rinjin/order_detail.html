@@ -6,7 +6,10 @@
 <ul>
 {% for order in order_list %}
     <li>Dish {{ order.dish_id.dish_name }} in amount
-        {{ order.amount }}</li>
+        {{ order.amount }}
+        <a href="
+{% url 'sushi_rinjin:order_detail_edit' id_order order.id %}">
+            (edit)</a></li>
 {% endfor %}
 </ul>
     {% if user.username %}

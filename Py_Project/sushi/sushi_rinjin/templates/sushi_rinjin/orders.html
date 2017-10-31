@@ -11,9 +11,15 @@
     {% if result_list %}
         <ul>
         {% for res in result_list %}
-        <li><a href="/sushi_rinjin/order/{{ res.0 }}/"> Order № {{ res.0 }},
-        </a> client {{ res.1 }}, {{ res.2 }} (with {{ res.3 }})
+        <li><a href="/sushi_rinjin/order/{{ res.0 }}/"> Order № {{ res.0 }},</a>
+
+            {% if user.username %}
+            <a href="/sushi_rinjin/order/{{ res.0 }}/edit">(edit)</a>
+            {% endif %}
+
+            client {{ res.1 }}, {{ res.2 }} (with {{ res.3 }})
             <p>Detail: tel {{ res.4 }}, address {{ res.5 }}</p>
+
         </li>
         {% endfor %}
         </ul>
