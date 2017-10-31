@@ -1,0 +1,46 @@
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<h3>Some queries with REST</h3>
+
+    {% csrf_token %}
+    <ol>
+        <li>Choose an ingridient to see the dishes that contain this
+            ingredient</li>
+         {{ form_ingreds }}
+        <p>
+            <button id="button_ingreds">Choose ingredient</button>
+        </p>
+        <hr>
+        <li>Type a price and see the dishes, witch price less</li>
+        {{ form_price }}
+        <p>
+            <button id="button_price">See dishes</button>
+            <div id="query_price"></div>
+        </p>
+        <hr>
+
+        {% if user.username %}
+        <li>Choose a user to see his orders</li>
+        {{ form_user_order }}
+        <p>
+            <button id="button_user_order">See user`s orders</button>
+        </p>
+            <div id="query_user_orders"></div>
+        {% endif %}
+    </ol>
+    <br>
+    <p>
+        <em><a href="/sushi_rinjin">Back to main page</a></em>
+    </p>
+</form>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+<script type="text/javascript" src="{% static "js/query_users.js" %}"></script>
+
+{% endblock %}

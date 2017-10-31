@@ -1,7 +1,8 @@
 from django.db import models
-from sushi_rinjin.models.ingredients import Ingredients
 from django.forms import ModelForm
+from rest_framework import serializers
 from django import forms
+from sushi_rinjin.models.ingredients import Ingredients
 
 
 class Menu(models.Model):
@@ -22,3 +23,9 @@ class MenuForm(ModelForm):
 
 class EditMenuForm(forms.Form):
     dish_for_edit = forms.ModelChoiceField(queryset=Menu.objects.all())
+
+
+class MenuSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Menu
+        fields = '__all__'

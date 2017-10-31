@@ -19,7 +19,8 @@ def list_query(request):
                 return render(request,
                               'sushi_rinjin/queries/ingred_in_menu.html',
                               {'dishes': dishes,
-                               'ingred_name': some_ingred.ingredient})
+                               #'ingred_name': some_ingred.ingredient})
+                               'ingred_name': some_ingred})
 
         if '_price' in request.POST:
             if form_price.is_valid():

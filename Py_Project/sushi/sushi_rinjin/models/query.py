@@ -17,3 +17,9 @@ class PriceDishForm(forms.Form):
 class UserOrderForm(forms.Form):
     user = forms.ModelChoiceField(queryset=User.objects.all(),
                                   label='User', initial=1, empty_label=None)
+
+
+class IngredDishForm(forms.Form):
+    ingredient = forms.ModelMultipleChoiceField(
+        queryset=Ingredients.objects.all(),
+        widget=forms.CheckboxSelectMultiple)
