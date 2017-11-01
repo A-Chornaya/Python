@@ -33,3 +33,10 @@ def less_price(request, price):
     serializer = MenuSerializer(queryset, many=True)
     return Response(serializer.data)
 
+
+@api_view(['GET'])
+def dish_with_ingredients(request, price):
+    queryset = Menu.objects.filter(price__lt=price)
+    serializer = MenuSerializer(queryset, many=True)
+    return Response(serializer.data)
+

@@ -23,9 +23,11 @@
     <li>
         <a href="/sushi_rinjin/queries/">Form with queries</a>
     </li>
-     <li>
-        <a href="/sushi_rinjin/queries_rest/">Queries with REST</a>
-    </li>
+    {% if user.username %}
+         <li>
+            <a href="/sushi_rinjin/queries_rest/">Queries with REST</a>
+        </li>
+    {% endif %}
 </ol>
 
 {% endblock %}
