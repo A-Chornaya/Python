@@ -29,6 +29,8 @@ urlpatterns = [
         name='edit_ingred'),
     url(r'^ingred/$', view_ingred_rest.IngredList.as_view(),
         name='ingred'),
+    url(r'^ingred_detail/(?P<pk>[0-9]+)$', view_ingred_rest.IngredDetail.as_view(),
+        name='ingred_detail/'),
     url(r'^ingred_rest/$', view_ingred_rest.ingred_rest, name='ingred_rest'),
 
     url(r'^menu/$', view_menu.index, name='menu'),
@@ -56,6 +58,8 @@ urlpatterns = [
         view_queries_rest.user_orders, name='query_rest_user'),
     url(r'^queries_rest/price/(?P<price>[0-9]+)$',
         view_queries_rest.less_price, name='query_rest_price'),
+    url(r'^queries_rest/dish_with_ingredients/$',
+        view_queries_rest.dish_with_ingredients, name='dish_with_ingredients'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

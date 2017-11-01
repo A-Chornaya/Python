@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from django.shortcuts import render
 from sushi_rinjin.models.order import Order
 from sushi_rinjin.models.menu import Menu
+from sushi_rinjin.models.ingredients import Ingredients
 from sushi_rinjin.models.menu import MenuSerializer
 from sushi_rinjin.models.order import OrderSerializer
 from sushi_rinjin.models.query import IngredInDishForm
@@ -35,8 +36,9 @@ def less_price(request, price):
 
 
 @api_view(['GET'])
-def dish_with_ingredients(request, price):
-    queryset = Menu.objects.filter(price__lt=price)
-    serializer = MenuSerializer(queryset, many=True)
+def dish_with_ingredients(request):
+    ingred_id = request.GET.get('ingredient')
+    some_ingred = Ingredients.objects.get(id=ingred_id)
+    dishes = some_ingred.menu_set.all()
+    serializer = MenuSerializer(dishes, many=True)
     return Response(serializer.data)
-

@@ -9,10 +9,13 @@
     <ol>
         <li>Choose an ingridient to see the dishes that contain this
             ingredient</li>
-         {{ form_ingreds }}
+        {{ form_ingreds }}
         <p>
-            <button id="button_ingreds">Choose ingredient</button>
+            <button id="button_ingreds" formaction=
+                    "{% url 'sushi_rinjin:dish_with_ingredients' %}"
+                    formmethod="get">Choose ingredient</button>
         </p>
+        <div id="query_dishes_with_ingredients"></div>
         <hr>
         <li>Type a price and see the dishes, witch price less</li>
         {{ form_price }}

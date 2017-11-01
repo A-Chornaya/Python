@@ -19,4 +19,3 @@ class IngredList(generics.ListCreateAPIView):
 class IngredDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Ingredients.objects.all()
     serializer_class = IngredSerializer
-

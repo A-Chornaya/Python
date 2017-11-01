@@ -45,6 +45,25 @@ function getDishByPrice() {
     });
 }
 
+function getDihes() {
+    var ingred = $('input[name="ingredient"]:checked').val();
+
+    $.ajax({
+        url: "http://127.0.0.1:8000/sushi_rinjin/queries_rest/dish_with_ingredients?ingredient="
+        + ingred.toString(),
+        success: function (result) {
+            var dishes = {"dishes": result};
+
+            var template = "<ul type='square'>"+
+                "{{#dishes}}" +
+                "<li>{{dish_name}}</li>" +
+                "{{/dishes}}" +
+                "</ul>";
+            $("#query_dishes_with_ingredients").html(html);
+        }
+    });
+}
+
 (function () {
     document.getElementById("button_user_order")
         .addEventListener("click", function () {
@@ -53,5 +72,9 @@ function getDishByPrice() {
     document.getElementById("button_price")
         .addEventListener("click", function () {
             getDishByPrice();
+        });
+    document.getElementById("button_ingreds")
+        .addEventListener("click", function () {
+            getDihes();
         });
 })();
