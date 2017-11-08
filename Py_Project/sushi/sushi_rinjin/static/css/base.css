@@ -1,6 +1,14 @@
+/*body {*/
+    /*background-image: url('../img/pattern.png');*/
+/*}*/
+
 .page_header {
     background:lightseagreen;
+    background-image:url('../img/sushi-head1.jpg');
+    background-size: 100%;
+    background-position: center top;
     padding: 10px;
+    height: 200px;
 }
 
 .head_title {
@@ -34,18 +42,20 @@
 }
 
 #user_part {
-  float: right;
-  margin-top:2px;
+    float: right;
+    margin-top:2px;
+    padding-top: 50px;
 }
 
 #promo {
     font-size:20px;
     font-style: italic;
+    padding-top: 50px;
 }
 
 #home a {
     text-decoration: none;
-    color: indigo;
+    color: black;
 }
 
 #home a:hover {
