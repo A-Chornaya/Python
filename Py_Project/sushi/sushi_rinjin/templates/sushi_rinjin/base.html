@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sushi Rinjin</title>
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+     <div class="page_header">
+         <div class="login_zone">
+             <span id="login_label">
+                 <a href="{% url 'sushi_rinjin:login' %}">Log in</a>
+             </span>
+             <span id="logout_label">
+                 <a href="{% url 'sushi_rinjin:logout' %}">Log out</a>
+             </span>
+         </div>
+         <div class="head_title">
+            <h1>
+                <span id="home" >
+               <a href="{% url 'sushi_rinjin:index' %}">
+                   Sushi delivery &quot;Rinjin&quot;
+               </a>
+               </span>
+            </h1>
+        </div>
+        <div id="user_part">
+            {% if user.username %}
+                Welcome, <strong>{{ user.username }}!</strong>
+            {% else %}
+                Welcome, anonymous user!
+            {% endif %}
+        </div>
+         <div id="promo">
+            Come to a neighbor on a sushi
+        </div>
+         <div class="menu">
+
+         </div>
+    </div>
+    <div class="content container">
+        <div class="block_content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
+
+<h2>List of order №{{ id_order }}</h2>
+<ul>
+{% for order in order_list %}
+    <li>Dish {{ order.dish_id.dish_name }} in amount
+        {{ order.amount }}
+        <a href="
+{% url 'sushi_rinjin:order_detail_edit' id_order order.id %}">
+            (edit)</a></li>
+{% endfor %}
+</ul>
+    {% if user.username %}
+        <p>
+            <a href="{% url 'sushi_rinjin:order_detail_add' id_order %}">Add
+        another order detail</a>
+        </p>
+    {% endif %}
+
+    <p><strong>The total cost is: {{ cost }}grn</strong></p>
+    <br>
+    <p>
+        <em><a href="/sushi_rinjin/orders/">Back to orders</a></em>
+    </p>
+
+{% endblock %}

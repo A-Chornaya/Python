@@ -1,0 +1,19 @@
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+
+<h3>List of ingredients by REST</h3>
+<button id="get_ingred_rest">Get Ingredients</button>
+<div id="ingred_list">
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+<script type="text/javascript" src="{% static "js/ingred.js" %}"></script>
+
+{% endblock %}

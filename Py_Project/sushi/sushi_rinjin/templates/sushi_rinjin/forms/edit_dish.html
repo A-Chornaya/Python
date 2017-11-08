@@ -1,0 +1,12 @@
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
+
+<h3>Edit dish '{{ name_dish }}'</h3>
+<form action="{% url 'sushi_rinjin:edit_dish' id_dish %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+   <p><input type="submit" value="Edit dish"/></p>
+</form>
+
+{% endblock %}

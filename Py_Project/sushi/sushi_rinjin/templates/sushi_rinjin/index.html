@@ -1,23 +1,33 @@
-<div>
-    <h1 style="text-align: center;">
-        <span class="marker">
-            <span style="font-size:26px; font-family:comic sans ms,cursive">
-                Суши - бар &quot;Rinjin&quot;
-            </span>
-        </span>
-    </h1>
-    <p style="text-align: left;">
-        <em>
-            <span style="font-size:20px">
-                Заходи к соседу на суши
-            </span>
-        </em>
-    </p>
-</div>
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
 
 <div>
 <ol>
-    <li><a href="/sushi_rinjin/menu/">Меню - содержит {{ menu_amount }} блюд</a></li>
+    <li>
+        <a href="/sushi_rinjin/ingredients/">What our dishes consist of</a>,
+        <a href="/sushi_rinjin/ingred/">(and by rest)</a>.<br>
+        <!--<a href="/sushi_rinjin/ingred_rest/">All ingredients by rest</a>-->
+    </li>
+    <li>
+        <a href="/sushi_rinjin/menu/">Menu - contains {{ menu_amount }}
+            dishes</a>
+    </li>
 
+    {% if user.username %}
+        <li>
+            <a href="/sushi_rinjin/orders/">Orders</a>
+        </li>
+    {% endif %}
+
+    <li>
+        <a href="/sushi_rinjin/queries/">Form with queries</a>
+    </li>
+    {% if user.username %}
+         <li>
+            <a href="/sushi_rinjin/queries_rest/">Queries with REST</a>
+        </li>
+    {% endif %}
 </ol>
-</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
+
+{% load rest_framework %}
+
+<h3>Detail of order № {{ id_order }}</h3>
+
+<form action="
+{% url 'sushi_rinjin:order_detail_edit' id_order order_list.id %}"
+      method="POST">
+    {% csrf_token %}
+    {% render_form serializer %}
+    <input type="submit" value="Edit" name = 'edit'>
+    <input type="submit" value="Delete" name = 'delete'>
+</form>
+
+{% endblock %}

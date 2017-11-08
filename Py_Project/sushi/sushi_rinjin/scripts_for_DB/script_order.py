@@ -1,17 +1,17 @@
 import django
-django.setup()
+#django.setup()
 
 from sushi_rinjin.models.order import Order
-from sushi_rinjin.models.users_data import UsersData
+from sushi_rinjin.models.users_data import UsersDataProfile
 
 
 def add_orders():
-    order1 = Order(pay_method='cash', user_id=UsersData.objects.get(id='1'),
+    order1 = Order(pay_method='cash', user_id=UsersDataProfile.objects.get(user_name='Anastasiia'),
                    pay=True)
-    order2 = Order(pay_method='credit card', user_id=UsersData.objects.get(
-        id='2'),
+    order2 = Order(pay_method='credit card', user_id=UsersDataProfile.objects.get(
+        user_name='Daniil'),
                    pay=True)
-    order3 = Order(user_id=UsersData.objects.get(id='4'),
+    order3 = Order(user_id=UsersDataProfile.objects.get(user_name='Ekaterina'),
                    pay=False)
 
     order1.save()
@@ -19,4 +19,3 @@ def add_orders():
     order3.save()
 
 
-add_orders()

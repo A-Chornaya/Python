@@ -1,16 +1,35 @@
-<h2>Меню</h2>
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
+
+<h2>Menu</h2>
+
+    {% if user.username %}
+        <p><a href="{% url 'sushi_rinjin:add_dish' %}">Add new dish</a></p>
+        <p><a href="{% url 'sushi_rinjin:edit_menu' %}">Edit Menu</a></p>
+    {% endif %}
+
 <div>
-{% if dishes %}
-    <ul>
-    {% for dish in dishes %}
-        <li>{{dish.dish_name}}: {{dish.price}} грн</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No dishes in the Menu</p>
-{% endif %}
-<br>
-<p>
-    <em><a href="/sushi_rinjin/">Назад на главную</a></em>
-</p>
+    {% if dishes %}
+        <ul>
+        {% for dish in dishes %}
+            <li>{{dish.dish_name}}: {{dish.price}} grn, consist of:
+                <ul type = 'disk'>
+                    {% for ing in dish.ingredients.all %}
+                        <li>{{ ing.ingredient }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+            <br>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dishes in the Menu</p>
+    {% endif %}
+    <br>
+    <p>
+        <em><a href="/sushi_rinjin/">Back to main page</a></em>
+    </p>
 </div>
+
+{% endblock %}

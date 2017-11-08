@@ -1,0 +1,64 @@
+/*body {*/
+    /*background-image: url('../img/pattern.png');*/
+/*}*/
+
+.page_header {
+    background:lightseagreen;
+    background-image:url('../img/sushi-head1.jpg');
+    background-size: 100%;
+    background-position: center top;
+    padding: 10px;
+    height: 200px;
+}
+
+.head_title {
+    text-align: center;
+    font-size:22px;
+    font-family:comic sans ms, cursive;
+}
+
+.login_zone {
+  float: right;
+  margin-top:10px;
+  padding:10px;
+}
+
+#login_label {
+    width: 70px;
+    background:lightgreen;
+    padding:10px;
+}
+
+#logout_label {
+    width: 70px;
+    background:skyblue;
+    padding:10px;
+}
+
+#sign_up {
+    width: 70px;
+    background:springgreen;
+    padding:13px;
+}
+
+#user_part {
+    float: right;
+    margin-top:2px;
+    padding-top: 50px;
+}
+
+#promo {
+    font-size:20px;
+    font-style: italic;
+    padding-top: 50px;
+}
+
+#home a {
+    text-decoration: none;
+    color: black;
+}
+
+#home a:hover {
+    text-decoration: none;
+    color: black;
+   }

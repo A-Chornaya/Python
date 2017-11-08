@@ -1,0 +1,25 @@
+{% extends 'sushi_rinjin/base.html' %}
+
+{% block content %}
+
+<h3>Query 'Orders of user {{ user_name }}'</h3>
+
+<div>
+    {% if user_orders %}
+        <ul type="square">
+        {% for order in user_orders %}
+            <li>Order № {{order.0}} for the amount of {{order.1}} grn</li>
+        {% endfor %}
+        </ul>
+        <p>The total cost of all orders is <b>{{ total_cost }} grn</b></p>
+    {% else %}
+        <p>No orders at user {{ user_name }}</p>
+    {% endif %}
+    <br>
+    <p>
+        <em><a href="{% url 'sushi_rinjin:query_list' %}">Back to page with
+            queries</a></em>
+    </p>
+</div>
+
+{% endblock %}
