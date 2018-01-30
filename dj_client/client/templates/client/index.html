@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dj Client</title>
+</head>
+<body>
+    <h2>Django Client</h2>
+    <h3>Hello, user!</h3>
+    You can log-in with our form
+    <form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+        <!--
+        <div class="container">
+            <label for='login'><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="login" id='login' required>
+
+            <label for='password'><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id='password' required>
+
+            <button type="submit">Login</button>
+        </div>
+        -->
+        </hr>
+        <h4>OR</h4>
+        with another server
+        <button type="submit">Login with Server</button>
+     </form>
+</body>
+</html>
+
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dj Client</title>
+</head>
+<body>
+    <p>Hello, user №{{ id }}!</p>
+    <p>We get your credentials </p>
+    <ul>There are:
+        <br>
+        {% for key, value in result.items %}
+    <li> {{ key }}: {{ value }} </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'index'%}">Back to main</a>
+</body>
+</html>

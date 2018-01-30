@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dj Client</title>
+</head>
+<body>
+    <p>Now you are registered</p>
+    <p>Your authorization code is: {{ code }}</p>
+    <p>Press the button to get the information</p>
+    <form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+        <input type="hidden" name="code" value={{ code }}></p>
+        <button type="submit">Get a token</button>
+     </form>
+    <a href="{% url 'index'%}">Back to main</a>
+</body>
+</html>
