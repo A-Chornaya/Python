@@ -28,8 +28,7 @@ def sortColors3(nums):
     j = end
     next = 0
     while next < j:
-        current = nums[next]
-        del nums[next]
+        current = nums.pop(next)
         if current == 2:
             nums.insert(end, current)
             j -= 1
